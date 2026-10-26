@@ -27,7 +27,13 @@ curl -fsSL https://stagd.dev/install.sh | bash
 
 It checks the download against the release's checksums and puts `stagd` in `~/.local/bin`; `STAGD_INSTALL_DIR` for elsewhere, `STAGD_VERSION` for a given release. Homebrew on Linux works too.
 
-**Windows:** in [WSL](https://learn.microsoft.com/windows/wsl/install), the Linux way above. A native Windows build is to come.
+**Windows**, on amd64 or arm64, in PowerShell:
+
+```powershell
+irm https://stagd.dev/install.ps1 | iex
+```
+
+It puts `stagd.exe` in `%LOCALAPPDATA%\Programs\stagd` and adds that to your PATH. In WSL, the Linux way above works too.
 
 **With Go**, anywhere: `go install github.com/stagdhq/stagd/cmd/stagd@latest`.
 
