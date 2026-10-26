@@ -9,8 +9,28 @@ A live, seeded preview of your app for every pull request: built, started with i
 - [**stagd**](https://github.com/stagdhq/stagd): the command line, `stagd relay` for compute Stagd can't reach, the Kubernetes manifests a cluster gets, and the API contract ([buf.build/stagdhq/stagd](https://buf.build/stagdhq/stagd)).
 - [**homebrew-tap**](https://github.com/stagdhq/homebrew-tap): `brew install stagdhq/tap/stagd`.
 
+## Install the CLI
+
+**macOS**, with Homebrew:
+
+```bash
+brew install stagdhq/tap/stagd
+```
+
+or without it: `curl -fsSL https://stagd.dev/install.sh | bash`.
+
+**Linux**, any distribution (Debian, Ubuntu, Fedora, Arch, Alpine and the rest: the binary has no dependencies), on amd64 or arm64:
+
 ```bash
 curl -fsSL https://stagd.dev/install.sh | bash
 ```
+
+It checks the download against the release's checksums and puts `stagd` in `~/.local/bin`; `STAGD_INSTALL_DIR` for elsewhere, `STAGD_VERSION` for a given release. Homebrew on Linux works too.
+
+**Windows:** in [WSL](https://learn.microsoft.com/windows/wsl/install), the Linux way above. A native Windows build is to come.
+
+**With Go**, anywhere: `go install github.com/stagdhq/stagd/cmd/stagd@latest`.
+
+Then `stagd login`. `stagd update` updates it (`brew upgrade stagd` with Homebrew); what changed is in the [releases](https://github.com/stagdhq/stagd/releases).
 
 Security issues: security@stagd.dev, privately.
