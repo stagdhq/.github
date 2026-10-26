@@ -37,6 +37,6 @@ It puts `stagd.exe` in `%LOCALAPPDATA%\Programs\stagd` and adds that to your PAT
 
 **With Go**, anywhere: `go install github.com/stagdhq/stagd/cmd/stagd@latest`.
 
-Then `stagd login`. `stagd update` updates it (`brew upgrade stagd` with Homebrew); what changed is in the [releases](https://github.com/stagdhq/stagd/releases).
+Then `stagd login`. `stagd update` updates it; with Homebrew, `brew upgrade stagdhq/tap/stagd`, or `brew trust stagdhq/tap` once so a plain `brew upgrade` includes it (Homebrew 6 and later leaves untrusted taps out). What changed is in the [releases](https://github.com/stagdhq/stagd/releases).
 
 Security issues: security@stagd.dev, privately.
