@@ -7,7 +7,11 @@ A live, seeded preview of your app for every pull request: built, started with i
 ## Open source
 
 - [**stagd**](https://github.com/stagdhq/stagd): the command line, `stagd relay` for compute Stagd can't reach, the Kubernetes manifests a cluster gets, and the API contract ([buf.build/stagdhq/stagd](https://buf.build/stagdhq/stagd)).
+- [**blobfork**](https://github.com/stagdhq/blobfork): a copy-on-write fork of an Azure Blob Storage container or S3 bucket, as a database branch is of a database. A preview reads every file of the real one, and what it writes stays in the fork.
+- [**outbox**](https://github.com/stagdhq/outbox): answers Resend, Amazon SES and Amazon SNS the way they do, so an app's emails go to an inbox such as Mailpit and its text messages are kept, and nothing it sends leaves.
 - [**homebrew-tap**](https://github.com/stagdhq/homebrew-tap): `brew install stagdhq/tap/stagd`.
+
+All under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 ## Install the CLI
 
